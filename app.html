@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="icon" href="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-signin-client_id" content="175775235426-mo566bmcagdo7bp05uppf03rptq320vl.apps.googleusercontent.com">
+    <script>
+      var hostName = location.hostname;
+      var endPoint = '/nuSource/api/v1/';
+      var apiEndHost = hostName;
+      var isKlassroom = hostName === "www.klassroom.in";
+      var isKlassroomTest = hostName === 'klassroom.edupanion.com';
+      var isKlassroomKonnect = hostName.indexOf('klassroom') !== -1;
+      var isPremierTuition = hostName.indexOf('premiertuition') !== -1;
+      var isSkillSertifika = hostName.indexOf('app.skillsertifika') !== -1;
+      if (hostName === 'localhost'){
+        apiEndHost = "localhost/edmingle"
+      } else if (isKlassroom) {
+        apiEndHost = "klassroom.edmingle.com";
+      } else if (isKlassroomTest) {
+          apiEndHost = "testklassroom.edupanion.com";
+      } else if ( hostName.indexOf('edupanion') !== -1 ) {
+          apiEndHost = 'www.edupanion.com';
+      } else if(hostName.indexOf('edmaester') !== -1) {
+          apiEndHost = 'edmaester-api.edupanion.com';
+      } else{
+          apiEndHost = 'app.edmingle.com';
+      }
+      var apiEndpoint = location.protocol+'//'+apiEndHost+endPoint;
+      var isIDC = hostName !== "localhost";
+      var websiteLocation = isIDC ? location.protocol+'//'+location.hostname : "http://"+hostName+"/edmingle";
+      var titleEle = document.getElementsByTagName('title')[0];
+    </script>
+    <script>
+    if(hostName !== "localhost" && hostName.indexOf('edupanion') === -1){
+      //mixpanel only for live
+      (function(c,a){if(!a.__SV){var b=window;try{var d,m,j,k=b.location,f=k.hash;d=function(a,b){return(m=a.match(RegExp(b+"=([^&]*)")))?m[1]:null};f&&d(f,"state")&&(j=JSON.parse(decodeURIComponent(d(f,"state"))),"mpeditor"===j.action&&(b.sessionStorage.setItem("_mpcehash",f),history.replaceState(j.desiredHash||"",c.title,k.pathname+k.search)))}catch(n){}var l,h;window.mixpanel=a;a._i=[];a.init=function(b,d,g){function c(b,i){var a=i.split(".");2==a.length&&(b=b[a[0]],i=a[1]);b[i]=function(){b.push([i].concat(Array.prototype.slice.call(arguments,
+  0)))}}var e=a;"undefined"!==typeof g?e=a[g]=[]:g="mixpanel";e.people=e.people||[];e.toString=function(b){var a="mixpanel";"mixpanel"!==g&&(a+="."+g);b||(a+=" (stub)");return a};e.people.toString=function(){return e.toString(1)+".people (stub)"};l="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+  for(h=0;h<l.length;h++)c(e,l[h]);var f="set set_once union unset remove delete".split(" ");e.get_group=function(){function a(c){b[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));e.push([d,call2])}}for(var b={},d=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<f.length;c++)a(f[c]);return b};a._i.push([b,d,g])};a.__SV=1.2;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
+  MIXPANEL_CUSTOM_LIB_URL:"file:"===c.location.protocol&&"libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https:libs/mixpanel-2-latest.min.js":"libs/mixpanel-2-latest.min.js";d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)}})(document,window.mixpanel||[]);
+  mixpanel.init("500256032e8916bcd60ca8ba9eb2c310", {batch_requests: true})
+    }
+</script>
+    <script src="js/platform.js" async defer></script>
+    <script src="4.4/pusher.min.js"></script>
+    <script src="checkout.js"></script>
+<meta name="nuapp/config/environment" content="%7B%22modulePrefix%22%3A%22nuapp%22%2C%22environment%22%3A%22production%22%2C%22baseURL%22%3A%22/%22%2C%22locationType%22%3A%22hash%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%7D%2C%22APP%22%3A%7B%22name%22%3A%22nuapp%22%2C%22version%22%3A%220.0.0+f2941a49%22%7D%2C%22exportApplicationGlobal%22%3Afalse%7D" />
+    <link href="//fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://edmingle.b-cdn.net/nuapp/assets/vendor-d41d8cd98f00b204e9800998ecf8427e.css">
+    <link rel="stylesheet" href="nuapp/assets/stylesheets/video-js.min-b220ca14d8f24e25d2ca930ec083aaf9.css">
+    <link rel="stylesheet" href="nuapp/assets/stylesheets/videojs-reso-switcher-fc88e7c2ed6f630f7730453aaca2e313.css">
+    <link rel="stylesheet" href="nuapp/assets/stylesheets/summernote-b85de256c09e8bcfbe16b0a48a103009.css">
+    <link rel="stylesheet" href="nuapp/assets/stylesheets/select2.min-8969ac4614d64a13dfc32e1eb4e731f7.css">
+    <link rel="stylesheet" href="nuapp/assets/stylesheets/slider-1ff78272efe06720dc0f8d3caf4d5423.css">
+    <link rel="stylesheet" href="nuapp/assets/stylesheets/pace-theme-center-simple-a02f4f13e87e44a3dbda282c58cb1142.css">
+    <link rel="stylesheet" href="nuapp/assets/stylesheets/mathquill-2daa362994c4ed16173627c2071798fe.css">
+    <link rel="stylesheet" href="nuapp/assets/nuapp-f98f978cfc511f3a7b828b0e92f9ce5e.css">
+    <script>
+      function injectStyles(rule) {
+        var div = $("<div />", {
+          html: '&shy;<style>' + rule + '</style>'
+        }).appendTo("body");
+      }
+      window.paceOptions = {
+        ajax: false,
+        elements: {
+          selectors: ['.navbar']
+        }
+      }
+    </script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+    </script>
+    <script type="text/javascript" async
+      src="mathjax/latest/MathJax.js">
+    </script>
+    <script src="nuapp/assets/pace.min-81e8d072a04476f8fd4b6d1f65f4188b.js"></script>
+    <script src="nuapp/assets/js/ace-f6d64caff20087a53c46c79127c09dc5.js"></script>
+    <script src="3.2/pusher.min.js"></script>
+    <script>
+      /*var Pusher = new Pusher('47557210b1415af90100', {
+            encrypted: true
+      });
+      window.Pusher = Pusher;*/
+    </script>
+    <!-- Hotjar Tracking Code for https://edmingle.com/ -->
+<script>
+  (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:2648908,hjsv:6};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+<!-- Mix Panel -->
+<!-- <script type="text/javascript">
+  (function(f,b){if(!b.__SV){var e,g,i,h;window.mixpanel=b;b._i=[];b.init=function(e,f,c){function g(a,d){var b=d.split(".");2==b.length&&(a=a[b[0]],d=b[1]);a[d]=function(){a.push([d].concat(Array.prototype.slice.call(arguments,0)))}}var a=b;"undefined"!==typeof c?a=b[c]=[]:c="mixpanel";a.people=a.people||[];a.toString=function(a){var d="mixpanel";"mixpanel"!==c&&(d+="."+c);a||(d+=" (stub)");return d};a.people.toString=function(){return a.toString(1)+".people (stub)"};i="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking start_batch_senders people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
+  for(h=0;h<i.length;h++)g(a,i[h]);var j="set set_once union unset remove delete".split(" ");a.get_group=function(){function b(c){d[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));a.push([e,call2])}}for(var d={},e=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<j.length;c++)b(j[c]);return d};b._i.push([e,f,c])};b.__SV=1.2;e=f.createElement("script");e.type="text/javascript";e.async=!0;e.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
+  MIXPANEL_CUSTOM_LIB_URL:"file:"===f.location.protocol&&"libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https:libs/mixpanel-2-latest.min.js":"libs/mixpanel-2-latest.min.js";g=f.getElementsByTagName("script")[0];g.parentNode.insertBefore(e,g)}})(document,window.mixpanel||[]);
+  // Enabling the debug mode flag is useful during implementation,
+  // but it's recommended you remove it for production
+  mixpanel.init('af9667c66afac249716874aab575623b', {debug: true});
+  mixpanel.track('Sign up');
+  </script> -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L5Y2Q9V69J"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-L5Y2Q9V69J');
+</script>
+    <style>
+      #initial-loader{
+        position: fixed;
+        z-index: 2000;
+        margin: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 400px;
+        width: 40%;
+        text-align: center;
+      }
+      @media (max-width:768px) {
+        #initial-loader{
+          width:90%;
+        }
+      }
+      .text{
+        color:#fff;
+        margin-top: 40px;
+      }
+      .pace-active{
+        width:320px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="initial-loader">
+        <img id="logoInfo">
+        <br>
+        <h3 class="text">Setting up your environment</h3>
+    </div>
+    <script src="https://edmingle.b-cdn.net/nuapp/assets/vendor-ac928beb3a70d48a92e8e255e9306122.js"></script>
+    <script type="text/javascript" src="charts/loader.js"></script>
+    <script src="nuapp/assets/js/jquery-ui-draggable-e9c7ead2d3c981563a73e04746870d51.js" async></script>
+    <div id="nuapp-js"></div>
+<script>
+    window.isFromTM = false;
+    if(isIDC){
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-71294391-2', 'auto');
+      ga('send', 'pageview');
+    }
+    var pgUrl = window.location.href;
+    var URLObj = new URL(pgUrl);
+    var edAuthToken = URLObj.searchParams.get('edauthtoken');
+    if(edAuthToken){
+      localStorage.setItem('apikey', edAuthToken);
+      //window.location.href = pgUrlArr[0]+'/';
+      var deleteParam  = URLObj.searchParams.delete('edauthtoken');
+      // window.location.href =URLObj.href;
+      window.history.replaceState({},'',URLObj.href);
+    }
+    $.ajax({
+        url: apiEndpoint+'institute/instituteinfo'+'?host_name='+hostName,
+        headers:{ APIKEY: localStorage.getItem('apikey')}
+    }).done(function(json){
+      window.INSTITUTE = json.inst_info;
+      window.PAYMENTINFO = json.paymentinfo;
+      var portName = json.inst_info.portal_name;
+      var logoArr = json.inst_info.logo_details;
+      var portalTitle = json.website_info && json.website_info[0] ? (json.website_info[0].page_title ? json.website_info[0].page_title : (json.inst_info.title ? json.inst_info.title : '')) : (json.inst_info.title ? json.inst_info.title : '')
+      titleEle.innerHTML = portalTitle;
+      window.LOGO_DETAILS = logoArr;
+      window.PORTAL_NAME = portName;
+      // updating favicon
+      var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+      link.type = 'image/x-icon';
+      link.rel = 'icon';
+      link.href = json.inst_info.favicon_file_url ? json.inst_info.favicon_file_url : "images/favicon.png";
+      document.getElementsByTagName('head')[0].appendChild(link);
+      if(logoArr && logoArr.length){
+        var logoData = logoArr.find(function(la){
+          return la.logo_type === 2;
+        });
+        if(logoData){
+          $('#logoInfo').attr('src', logoData.logo_url);
+          $('#logoInfo').css('height',logoData.logo_height);
+          $('#logoInfo').css('width',logoData.logo_width);
+          if(logoData.background_color && logoData.background_color!=""){
+            $('.pace-running').css("background-color", logoData.background_color);
+          }
+        }
+      }
+      if (hostName === 'localhost'){
+        apiEndHost = "localhost/edmingle"
+      } else if (isKlassroom) {
+        apiEndHost = "klassroom.edmingle.com";
+      } else if (isKlassroomTest) {
+          apiEndHost = "testklassroom.edupanion.com";
+      } else if ( hostName.indexOf('edupanion') !== -1 ) {
+          apiEndHost = 'www.edupanion.com';
+      } else if(hostName.indexOf('edmaester') !== -1) {
+          apiEndHost = 'edmaester-api.edupanion.com';
+      } else if (portName && portName != "") {
+          apiEndHost = portName + '-api.edmingle.com';
+      }
+      apiEndpoint = location.protocol+'//'+apiEndHost+endPoint;
+      userMetaLoader();
+    }).fail(function(){
+        titleEle.innerHTML = '';
+        userMetaLoader();
+    });
+    function userMetaLoader(){
+      window.API_END_POINT = apiEndpoint;
+      $.ajax({
+          url: apiEndpoint+'user/usermeta',
+          headers:{ APIKEY: localStorage.getItem('apikey')}
+      }).done(function(json){
+            /*if(isChemophilic && json.user.org_data.length && json.user.org_data[0].role !== 'admin'){
+              localStorage.removeItem('apikey');
+              location.reload();
+            }*/
+            if(json.user.org_data[0].role === "student" && !isKlassroomKonnect){
+              window.location.href = "/myaccount/";
+            }
+            window.num_packages = json.num_packages == 0 && json.user_classes && json.user_classes.length<=1 ? 0 : 1;
+            window.num_packages = 1;
+            window.USER_META = json.user;
+            window.CHANNELS = json.channels;
+            window.USER_META.is_development = !isIDC;
+            if(isKlassroomKonnect && json.user.org_data.length > 1){
+              var orgData = json.user.org_data || [];
+              var lmsOrg = orgData.filter(function(o){
+                return o.institution_id === 1;
+              });
+              window.USER_META.current_org = lmsOrg[0];
+            } else {
+              window.USER_META.current_org = json.user.org_data[0];
+            }
+            localStorage.setItem('name',json.user.name);
+            localStorage.setItem('username',json.user.username);
+            localStorage.setItem('role',json.user.role);
+            var currentOrg = json.user.current_org;
+            if(typeof mixpanel !== 'undefined'){
+              if(currentOrg && (currentOrg.role === 'admin' || currentOrg.role === 'tutor')){
+                mixpanel.identify(json.user.user_id);
+                mixpanel.people.set({
+                  "$email": json.user.email,    // only reserved properties need the $
+                  "User Role": currentOrg.role,    // Send dates in ISO timestamp format (e.g. "2020-01-02T21:07:03Z")
+                  "USER_ID": json.user.user_id,    // use human-readable names
+                });
+              }
+            }
+          var resourceLang = json.user.language;
+          var langResources = document.createElement('script');
+          if(resourceLang === 'zh-TW'){
+            langResources.setAttribute('src', 'nuapp/assets/translations/resources_zh-TW-e913abdd7c389d52237e3b07f26dc74b.js');
+          } else {
+            langResources.setAttribute('src', 'nuapp/assets/translations/resources_en-61907c0371edab5f9d3f25bb5e4618a0.js');
+          }
+          var scriptDiv = document.getElementById('nuapp-js');
+          scriptDiv.appendChild(langResources);
+          langResources.onload = function() {
+            var nuappscript = document.createElement('script');
+            nuappscript.setAttribute('src', 'nuapp/assets/nuapp-f5c60dc3353f3df822f4b83928a3bfa4.js');
+            scriptDiv.appendChild(nuappscript);
+          };
+          var instId = json.user.org_data[0].institution_id;
+          if(instId == 56 || instId == 32){
+            var customCssFile = document.createElement('link');
+            customCssFile.setAttribute('rel',"stylesheet");
+            customCssFile.setAttribute('href',"nuapp/assets/stylesheets/themecss-7c4ee4a46fec19a541f23e09bf108262.css");
+            scriptDiv.appendChild(customCssFile);
+          } else if(instId == 37 || instId == 156){
+            var customCssFile = document.createElement('link');
+            customCssFile.setAttribute('rel',"stylesheet");
+            customCssFile.setAttribute('href',"nuapp/assets/stylesheets/themecssSkae-fd92949b6ecf2e7ec2f276e26d0f32c5.css");
+            scriptDiv.appendChild(customCssFile);
+          }
+          videojs.options.flash.swf = websiteLocation + "assets/video-js.swf";
+          google.charts.load('current', {'packages':['corechart','bar']});
+          window.MQ = MathQuill.getInterface(2);
+      }).fail(function(){
+          localStorage.setItem('redirect_from', location.href);
+          if(isPremierTuition){
+          } else if(isSkillSertifika){
+            // actual domain
+          } else {
+            if(window.INSTITUTE.logout_url){
+                window.location = window.INSTITUTE.logout_url;
+            } else {
+                window.location = websiteLocation;
+            }
+          }
+      });
+    }
+</script>
+<script>
+  function onLoad() {
+    gapi.load('auth2', function() {
+      gapi.auth2.init();
+    });
+  }
+  $(document).bind("keyup keydown", function(e){
+      if(e.ctrlKey && e.keyCode == 80){
+          e.preventDefault();
+      }
+  });
+</script>
+<script src="js/platform.js?onload=onLoad" async defer></script>
+<script src="api/player.js"></script>
+<script id="bolt" src="bolt/run/bolt.min.js" async></script>
+<script src="v1/checkout.js" async></script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+.overlay:before {
+  opacity: 0.5;
+}
+.nav-utility .sub{
+  color: #fff;
+  font-weight: bold;
+  font-size: 15px;
+}
+.nav-utility .fa-phone, .nav-utility .ti-email{
+  color: #fff;
+}
+.course-item .course-box-details{
+  position: absolute;
+  padding: 0;
+  bottom: 0;
+  right:0;
+  left:0;
+  height: 54%;
+  background-color: #f1f1f1;
+}
+.course-item .course-img-details{
+  position: absolute;
+  left:0;
+  right:0;
+  height: 46%;
+}
+.course-item .course-box-details h5{
+  color: #333;
+  font-size: 18px;
+  margin-top:0px;
+}
+.course-item .course-partner{
+  position: absolute;
+  top: 30%;
+  padding: 10px;
+  background: #fff;
+  border-radius: 5px;
+  left: 15px;
+  z-index: 4;
+  border: 2px solid #c0504d;
+}
+.course-item .course-type{
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  color: #797979;
+  font-size: 12px;
+}
+.course-item .course-type.cost-label{
+  color: #000;
+}
+.course-box-triangle{
+  height: 0;
+  overflow: hidden;
+  margin-top: -60px;
+  padding-top: 60px;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  z-index: 3;
+}
+.course-box-triangle::before{
+  border-style: solid;
+  border-width: 0 0 60px 360px;
+  border-color: transparent transparent #c0504d;
+  content: "";
+  display: block;
+  height: 0;
+  position: relative;
+  top: -60px;
+  width: 0;
+}
+.feature.boxed.course-item{
+  min-height: 350px;
+}
