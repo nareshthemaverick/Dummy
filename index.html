@@ -10,7 +10,7 @@
         src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/custom.css">
+
     <title>Simple Sidebar - Start Bootstrap Template</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -23,431 +23,330 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="css/custom.css">
 </head>
 
-<body>
-    <div class="d-flex" id="wrapper">
-        <!-- Sidebar-->
-        <div style="display: none;" class="border-end bg-white" id="sidebar-wrapper">
-            <div class="sidebar-heading border-bottom bg-light">LearnEngg</div>
-            <div class="contenedor-menu">
-                <!-- <a href="" class="btnMenu">Menu <i class="fa fa-bars"></i></a> -->
+<body style="background-color: #f3f3f3;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <div class="container-fluid">
+            <div class="toggle-btn">
 
-                <ul class="menu">
-                    <li><a href="#">Element 1</a></li>
-                    <li><a href="#">Element 2 <i class="fa fa-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="#">Sub-Element #1</a></li>
-                            <li><a href="#">Sub-Element #2</a></li>
-                            <li><a href="#">Sub-Element #3</a></li>
-                            <li><a href="#">Sub-Element #4</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Element 3</a></li>
-                    <li><a href="#">Element 4 <i class="fa fa-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="#">Sub-Element #1</a></li>
-                            <li><a href="#">Sub-Element #2</a></li>
-                            <li><a href="#">Sub-Element #3</a></li>
-                            <li><a href="#">Sub-Element #4</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Element 5</a></li>
-                    <li><a href="#">Element 6</a></li>
-                    <li><a href="#">Element 7 <i class="fa fa-chevron-down"></i></a>
-                        <ul>
-                            <li><a href="#">Sub-Element #1</a></li>
-                            <li><a href="#">Sub-Element #2</a></li>
-                            <li><a href="#">Sub-Element #3</a></li>
-                            <li><a href="#">Sub-Element #4</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Element 8</a></li>
+                <button class="btn btn-primary" id="sidebarToggle">Toggle Menu</button>
+            </div>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                    <li class="nav-item active"><a class="nav-link" href="#!">Product</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="#!">About us</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="#!">Contact us</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="#!">login</a></li>
+                    <li class="nav-item"> <button class="btn btn-primary">Enrole</button></li>
+                    <!-- <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#!">Action</a>
+                            <a class="dropdown-item" href="#!">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#!">Something else here</a>
+                        </div>
+                    </li> -->
                 </ul>
             </div>
         </div>
-        <!-- Page content wrapper-->
-        <div id="page-content-wrapper">
-            <!-- Top navigation-->
-            <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-                <div class="container-fluid">
-                    <button style="display: none;"class="btn btn-primary" id="sidebarToggle">Toggle Menu</button>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation"><span
-                            class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
-                            <li class="nav-item active"><a class="nav-link" href="#!">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#!">Link</a></li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#!">Action</a>
-                                    <a class="dropdown-item" href="#!">Another action</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#!">Something else here</a>
-                                </div>
-                            </li>
+    </nav>
+    <div class="card-hanging">
+        <div style="padding-top: 1%;padding-left: 1%;">Engineering Mathematics - I | Linear Algebra | <b
+                style="color: #005AC3;">Evaluation of double Integrals</b></div>
+    </div>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar-->
+        <div style="background-color:#f3f3f3; width: 40%;" class="" id="sidebar-wrapper">
+
+            <div class="contenedor-menu">
+                <!-- <a href="" class="btnMenu">Menu <i class="fa fa-bars"></i></a> -->
+                <span class="example"><b>Table of Contents</b></span>
+                <ol class="menu">
+                    <li><a href="#">Linear Algebra<i class="fa fa-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="#">1.1 Evaluation of double integrals</a></li>
+                            <li><a href="#">1.2 Gauss - Jordan method</a></li>
+                            <li><a href="#">1.3 Consistency & solution of linear integrals</a></li>
+                            <li><a href="#">1.4 Linear and orthogonal transformation</a></li>
                         </ul>
-                    </div>
-                </div>
-            </nav> -->
-            <!-- Page content-->
-            <!-- <div class="container-fluid" style="margin-left: 2%;">
-
-                <h1>Homogeneous Function</h1>
-
-
-
-                <p>A function f(x, y) is said to be a homogeneous function of degree 'n' in x and y, if </p>
-
-                <div class="example-description" id="example1">
-                    <h3>Example 1.</h3>
-                    <p>Determine the radius of curvature of the straight line.</p>
-                </div>
-
-
-                <div class="example-description" id="example1">
-
-                    <h2>Example 1</h2>
-                </div>
-
-                <p>$$ \eqalign {f(k{\bf{x}},ky) &= a{(k{\bf{x}})^2} + 2h(k{\bf{x}})(ky) + b{(ky)^2} \\
-                    &= a{k^2}{{\bf{x}}^2} + 2h{k^2}{\bf{x}}y + b{k^2}{y^2} \\
-                    &= {k^2}(a{{\bf{x}}^2} + 2h{\bf{x}}y + b{y^2}) \\
-                    f(k{\bf{x}},ky) &= {k^2}f({\bf{x}},y)
-                    }$$</p>
-                <p>f(x, y) is s homogeneous function of degree 2
-                </p>
-
-                <h2>Example 2</h2>
-
-                <p>$$ \eqalign {f({\bf{x}},y) &= {\sin ^{ - 1}}\left( {{{\bf{x}} \over y}} \right) + {\cos ^{ -
-                    1}}\left( {{{\bf{x}} \over y}} \right) \\
-                    f(k{\bf{x}},ky) &= {\sin ^{ - 1}}\left( {{{k{\bf{x}}} \over {ky}}} \right) + {\cos ^{ -
-                    1}}\left( {{{k{\bf{x}}} \over {ky}}} \right) \\
-                    &= {\sin ^{ - 1}}\left( {{{\bf{x}} \over y}} \right) + {\cos ^{ - 1}}\left(
-                    {{{\bf{x}}\over y}} \right) \\
-                    f(k{\bf{x}},ky) &= {k^0}f({\bf{x}},y)
-                    }$$
-                </p>
-
-                <p>f(x, y) is s homogeneous function of degree 0</p>
-
-                <h1>Euler's Theorem</h1>
-
-                <p>$$ \eqalign{Ifubea{\rm{homogeneous}}{\rm{function }}{\rm{of
-                    degree}}'n'in{\bf{x}}andy,then{\bf{x}}{{\partial u} \over {\partial {\bf{x}}}} + {{\partial u} \over
-                    {\partial y}} = nu}$$
-                </p>
-
-                <h2>Proof</h2>
-
-                <p>Since u is a homogeneous function of degree 'n' in x and y,</p>
-
-                <p> $$ \eqalign{u = {{\bf{x}}^n}f\left( {{y \over {\bf{x}}}} \right) & & & & & & .........(1)}$$</p>
-
-                <h3>Differentiating (1) partially with respect to x</h3>
-               <div style="width:100%;overflow-x:scroll">
-
-                <p>$$\eqalign{
-                    a{x^6} + b{x^4} + c{x^3} + dx =  & {{ - b \pm \sqrt {{b^2} - 4ac} } \over {2a}} + c{x^3} + dx + c{x^3} + dx + c{x^3} + dx + c{x^3} + dx + c{x^3} + dx + c{x^3} + dx \cr 
-                     =  &  + c{x^3} + dx + c{x^3} + dx + c{x^3} + dx \cr 
-                    a{x^6} + b{x^4} + c{x^3} + dx =  & {{ - b \pm \sqrt {{b^2} - 4ac} } \over {2a}} + c{x^3} + dx + c{x^3} + dx + c{x^3} + dx + c{x^3} + dx + c{x^3} + dx + c{x^3} + dx \cr 
-                     =  &  + c{x^3} + dx + c{x^3} + dx + c{x^3} + dx \cr 
-                     \cr} $$</p></div><div style="width:100%;overflow-x:scroll">
-                <p>$$ \eqalign{{{\partial u} \over {\partial {\bf{x}}}} &= {\partial \over {\partial {\bf{x}}}}\left[
-                    {{{\bf{x}}^n}f\left( {{y \over {\bf{x}}}} \right)} \right]{\partial \over {\partial
-                    {\bf{x}}}}(uv) &= u{\partial \over {\partial {\bf{x}}}}(v) + v{\partial \over {\partial
-                    {\bf{x}}}}(u) \\
-                    {{\partial u} \over {\partial {\bf{x}}}}u &= {{\bf{x}}^n}{\partial \over {\partial
-                    {\bf{x}}}}\left[ {f\left( {{y \over {\bf{x}}}} \right)} \right] + f\left( {{y \over {\bf{x}}}}
-                    \right){\partial \over {\partial {\bf{x}}}}({{\bf{x}}^n}) \\
-                    &= {{\bf{x}}^n}f'\left( {{y \over {\bf{x}}}} \right){\partial \over {\partial
-                    {\bf{x}}}}\left( {{y \over {\bf{x}}}} \right) + f\left( {{y \over {\bf{x}}}} \right)n{{\bf{x}}^{n -
-                    1}}{\partial \over {\partial {\bf{x}}}}({{\bf{x}}^n}) &= n{{\bf{x}}^{n - 1}} \\
-                    &= {{\bf{x}}^n}f'\left( {{y \over {\bf{x}}}} \right){\partial \over {\partial
-                    {\bf{x}}}}(y{{\bf{x}}^{ - 1}}) + n{{\bf{x}}^{n - 1}}f\left( {{y \over {\bf{x}}}} \right) \\
-                    &= {{\bf{x}}^n}f'\left( {{y \over {\bf{x}}}} \right)( - y{{\bf{x}}^{ - 1 - 1}}) +
-                    n{{\bf{x}}^{n - 1}}f\left( {{y \over {\bf{x}}}} \right) \\
-                    {\partial \over {\partial{\bf{x}}}}({{\bf{x}}^n}) &= n{{\bf{x}}^{n - 1}} \\
-                    &= {{\bf{x}}^n}f'\left( {{y \over {\bf{x}}}} \right)( - y{{\bf{x}}^{ - 1 - 1}}) +
-                    n{{\bf{x}}^{n - 1}}f\left( {{y \over {\bf{x}}}} \right) \\
-                    {{\partial u} \over {\partial {\bf{x}}}} &= - {y \over
-                    {{{\bf{x}}^2}}}{{\bf{x}}^n}f'\left(
-                    {{y \over {\bf{x}}}} \right) + n{{\bf{x}}^{n - 1}}f\left( {{y \over {\bf{x}}}} \right) \\
-                    {\bf{x}}{{\partial u} \over {\partial {\bf{x}}}} &= - {y \over
-                    {\bf{x}}}{{\bf{x}}^n}f'\left( {{y \over {\bf{x}}}} \right) + n{{\bf{x}}^{n}}f\left( {{y \over
-                    {\bf{x}}}}
-                    \right) & & & ..........(2) \\
-                    {{\partial u} \over {\partial y}} &= {\partial \over {\partial y}}\left[
-                    {{{\bf{x}}^n}f\left( {{y \over {\bf{x}}}} \right)} \right] \\ {\partial \over {\partial
-                    {\bf{x}}}}(uv) &= u{\partial \over {\partial {\bf{x}}}}(v) + v{\partial \over {\partial
-                    {\bf{x}}}}(u) \\
-                    {{\partial u} \over {\partial y}} &= {\partial \over {\partial y}}\left[
-                    {{{\bf{x}}^n}f\left( {{y \over {\bf{x}}}} \right)} \right] \\ {\partial \over {\partial
-                    {\bf{x}}}}(uv) &= u{\partial \over {\partial {\bf{x}}}}(v) + v{\partial \over {\partial
-                    {\bf{x}}}}(u) \\
-                    {{\partial u} \over {\partial y}} &= {{\bf{x}}^n}f'\left( {{y \over {\bf{x}}}} \right) +
-                    {\partial \over {\partial y}}\left( {{y \over {\bf{x}}}} \right) \\
-                    {{\partial u} \over {\partial y}} &= {{\bf{x}}^n}f'\left( {{y \over {\bf{x}}}} \right){1
-                    \over {\bf{x}}} \\ {\partial \over {\partial {\bf{x}}}}({\bf{x}}) &= 1 \\
-                    y{{\partial u} \over {\partial y}} &= {y \over {\bf{x}}}{{\bf{x}}^n}f'\left( {{y \over
-                    {\bf{x}}}} \right) & & & ..........(3) \\
-                    (2) + (3) \\
-                    {\bf{x}}{{\partial u} \over {\partial {\bf{x}}}} + y{{\partial u} \over {\partial y}} &= -
-                    {y\over {\bf{x}}}{{\bf{x}}^n}f'\left( {{y \over {\bf{x}}}} \right) + n{{\bf{x}}^{n}}f\left( {{y \over
-                    {\bf{x}}}} \right) + {y \over {\bf{x}}}{{\bf{x}}^n}f'\left( {{y \over {\bf{x}}}} \right) u &=
-                    {{\bf{x}}^{n}}f\left( {{y \over {\bf{x}}}} \right) \\
-                    &= n{{\bf{x}}^{n}}f\left( {{y \over {\bf{x}}}} \right) \\
-                    {\bf{x}}{{\partial u} \over {\partial {\bf{x}}}} + y{{\partial u} \over {\partial y}} &=
-                    nu
-                    }$$
-                </p>
-            
-            
-            
-               </div>
-                
-
-                <p>Note</p>
-
-                <p>If u be a homogeneous function of degree 'n' in x, y and z, then by Eulers theorem </p>
-
-                <p>$$ \eqalign{{\bf{x}}{{\partial u} \over {\partial {\bf{x}}}} + y{{\partial u} \over {\partial y}} +
-                    z{{\partial u} \over {\partial y}} = nu}$$
-                </p>
-
-                <p></p>
-            </div> -->
-            <div class="container-fluid" style="margin-right: 2%;margin-left: 2%;">
-                <!--           
-            <div class="container">
-              <h2>Cards with Contextual Classes</h2>
-              <div class="card">
-                <div class="card-body">Basic card</div>
-              </div>
-              <br>
-              <div class="card bg-primary text-white">
-                <div class="card-body">Primary card</div>
-              </div>
-              <br>
-              <div class="card bg-success text-white">
-                <div class="card-body">Success card</div>
-              </div>
-              <br>
-              <div class="card bg-info text-white">
-                <div class="card-body">Info card</div>
-              </div>
-              <br>
-              <div class="card bg-warning text-white">
-                <div class="card-body">Warning card</div>
-              </div>
-              <br>
-              <div class="card bg-danger text-white">
-                <div class="card-body">Danger card</div>
-              </div>
-              <br>
-              <div class="card bg-secondary text-white">
-                <div class="card-body">Secondary card</div>
-              </div>
-              <br>
-              <div class="card bg-dark text-white">
-                <div class="card-body">Dark card</div>
-              </div>
-              <br>
-              <div class="card bg-light text-dark">
-                <div class="card-body">Light card</div>
-              </div>
+                    </li>
+                    <li><a href="#">Infinite Series<i class="fa fa-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="#">Sub-Element #1</a></li>
+                            <li><a href="#">Sub-Element #2</a></li>
+                            <li><a href="#">Sub-Element #3</a></li>
+                            <li><a href="#">Sub-Element #4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Differential Calculus<i class="fa fa-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="#">Sub-Element #1</a></li>
+                            <li><a href="#">Sub-Element #2</a></li>
+                            <li><a href="#">Sub-Element #3</a></li>
+                            <li><a href="#">Sub-Element #4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Partial differentiation<i class="fa fa-chevron-down"></i></a>
+                        <ul>
+                            <li><a href="#">Sub-Element #1</a></li>
+                            <li><a href="#">Sub-Element #2</a></li>
+                            <li><a href="#">Sub-Element #3</a></li>
+                            <li><a href="#">Sub-Element #4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Integral Calculus</a></li>
+                </ol>
             </div>
-             -->
-
-                <div class="v110_60">
-                    <div class="change"><span class="v110_62">&nbsp;<u>Evaluation
-                                of double integrals</u></span> </div>
-                    <div class="v110_64"></div>
-                </div>
-
+        </div>
+        <!-- Page content wrapper-->
+        <div id="page-content-wrapper" class="shell">
+            <!-- Top navigation-->
+            <div class="card-head">
+                <div class="card-body" style="border-left:20px solid #005AC3;border-right:10px solid #005AC3;"><span
+                        class="main-head">Evaluation
+                        of double integrals</span></div>
+            </div>
+            <!-- Page content-->
+            <div class="main">
                 <br>
-                <span class="regular">We know that the double integral over the region 'R' of a function f(x, y)<br>
-                    is.</span>
-                <div class="eq">
-                    $$\int\!\!\!\int\limits_R {f(x,y)} dxdy \;\;\;\;\;\;\;\;\;\;\;.........{\rm{(1)}}$$
-                </div>
-                <br>
-                <span class="sub-head">Case (i)</span>
-                <br>
-                <span class="regular">Now let 'R' be
-                    the region bounded by the lines x = c1, x = c2, y = c3 and y = c4 where c1, c2, c3, c4 are
-                    constants.</span>
+                <div class="container-fluid" style="margin-right: 2%;margin-left: 2%;">
+                    <div style="font-size: 20px;">
+                        <span><b>Evaluation
+                                of double integrals</b>
+                            <div class=".v152_2"></div>
+                        </span>
+                    </div>
 
-                <br>
-                <span class="regular">Since we know the region of integration 'R' the double integral.</span>
-                <div class="eq">
-                    $$\int\!\!\!\int\limits_R {f(x,y)\;} dx\;dy{\text{ can be written as}} \\
-                    \int\limits_{c3}^{c4} {\int\limits_{c1}^{c2} {f(x,y)\;} } dx\;dy
-                    \;\;\;\;\;\;\;\;\;\;\;.........{\rm{(2)}}$$
-                </div>
-                <br>
-                <br>
+                    <br>
+                    <span class="regular">We know that the double integral over the region 'R' of a function f(x, y)<br>
+                        is.</span>
+                    <div class="eq">
+                        $$\int\!\!\!\int\limits_R {f(x,y)\;} dx\;dy \;\;\;\;\;\;\;\;\;\;\;.........{\rm{(1)}}$$
+                    </div>
+                    <br>
+                    <span class="sub-head">Case (i)</span>
+                    <br>
+                    <span class="regular">Now let 'R' be
+                        the region bounded by the lines x = c1, x = c2, y = c3 and y = c4 where c1, c2, c3, c4 are
+                        constants.</span>
 
-                <div class="text-white" style="background-color: #7FFFD4; width: 75%; margin-left: 10%;">
-                    <div class="card-body"><span style="text-align: center;" class="regular">(Here we replace ‘R’ by
-                            putting the limits for both x and
-                            y)</span></div>
-                </div>
+                    <br>
+                    <span class="regular">Since we know the region of integration 'R' the double integral.</span>
+                    <div class="eq">
+                        $$\int\!\!\!\int\limits_R {f(x,y)\;} dx\;dy{\text{ can be written as}} \\
+                        \int\limits_{c3}^{c4} {\int\limits_{c1}^{c2} {f(x,y)\;} } dx\;dy
+                        \;\;\;\;\;\;\;\;\;\;\;.........{\rm{(2)}}$$
+                    </div>
+                    <br>
+                    <div class="text-white quater" style="background-color: #7FFFD4;">
+                        <div class="card-body"><span style="text-align: center;" class="regular">(Here we replace ‘R’ by
+                                putting the limits for both x and
+                                y)</span></div>
+                    </div>
+                    <br>
+                    <div class="text-white quater" style="background-color: rgba(200,242,255,1);">
+                        <div class="card-body"><span class="regular"><b>Note</b></span><span
+                                style="text-align: justify;" class="regular"> For 'n'
+                                subregions, we have
+                                'n' points P1, P2, ……. Pn. Let f (P1), f (P2), ……. f (Pn) be the values of the functions
+                                at
+                                the
+                                points
+                                Pi. Now from the sum of the products f(Pi) si.</span></span></div>
+                    </div>
+                    <br>
+                    <div class="eq">
+                        $$\eqalign{
+                        \int\limits_{c3}^{c4} {\int\limits_{c1}^{c2} {f(x,y)\;dx\;dy} } & = \int\limits_{c3}^{c4}
+                        {\int\limits_{c1}^{c2} {f(x,y)\;dx\;dy} } \cr
+                        \int\limits_{c3}^{c4} {\int\limits_{c1}^{c2} {f(x,y)\;dx\;dy} } & = \int\limits_{c1}^{c2}
+                        {\int\limits_{c3}^{c4} {f(x,y)\;dx\;dy} } \cr} $$
+                    </div>
+
+                    <br>
+                    <span class="regular">In L.H.S., the
+                        order of integration is first with respect to x and then with respect to y.</span><br>
+                    <span class="regular">In R.H.S. the order of integration is first with respect to y and then with
+                        respect to
+                        x.</span>
+                    <br>
+                    <span class="sub-head">Case (ii)</span>
+                    <br>
+                    <span class="regular">Consider the double integral <div class="eq">$$\int\limits_{c1}^{c2}
+                            {\int\limits_{x1}^{x2}
+                            {f(x,y)\;} } dx\;dy$$</div></span>
+                    <span class="regular">Suppose x1 and x2 are functions of y say x1 = f(y), x2 = (y) and c1
+                        and c2 are constants then the region of integration is bounded by the curves x1 = f(y) and x2 =
+                        
+                        (y)
+                        and the lines y = c1 and y = c2.</span>
+                    <span class="regular">
+                        <center>
+                            <div class="v110_48"></div><span class="v110_49">Fig 1</span><br>
+                        </center>
+                    </span>
+                    <br>
+                    <span class="regular">This region is shown in figure.
+                        Here we integrate f(x, y) first w.r.t. x. Keeping pression w.r.t.y. i.e., first integration is
+                        along
+                        the
+                        horizontal strip PQ and then slide this strip PQ vertically.</span>
+
+                    <br>
+                    <span class="sub-head">Case (iii)</span>
+                    <br>
+                    <span class="regular">Now consider the double integral <div class="eq">$$\int\limits_{c1}^{c2}
+                            {\int\limits_{y1}^{y2}
+                            {f(x,y)\;} } dx\;dy$$</div></span>
+
+                    <span class="regular">Suppose y1
+                        and y2 are functions of x say y1 = f(x), y2 =  (x) and the lines x = c1 and x = c2.</span>
+                    <span class="regular">
+                        <center>
+                            <div class="v110_54"></div><span class="v110_55">Fig 2</span><br>
+                        </center>
 
 
+                    </span>
+                    <span class="regular">This region is shown in figure. Here we integrate f(x, y) first w.r.t. y
+                        keeping x
+                        as a
+                        constant and integrate the resulting expressions w.r.t. x.</span>
 
-                <br>
-                <div class="text-white quater" style="background-color: rgba(200,242,255,1);">
-                    <div class="card-body"><span class="regular"><b>Note</b></span><span style="text-align: justify;"
-                            class="regular"> For 'n'
-                            subregions, we have
-                            'n' points P1, P2, ……. Pn. Let f (P1), f (P2), ……. f (Pn) be the values of the functions at
-                            the
-                            points
-                            Pi. Now from the sum of the products f(Pi) si.</span></span></div>
-                </div>
-                <div class="eq">
-                    $$\eqalign{
-                    \int\limits_{c3}^{c4} {\int\limits_{c1}^{c2} {f(x,y)\;dx\;dy} } & = \int\limits_{c3}^{c4}
-                    {\int\limits_{c1}^{c2} {f(x,y)\;dx\;dy} } \cr
-                    \int\limits_{c3}^{c4} {\int\limits_{c1}^{c2} {f(x,y)\;dx\;dy} } & = \int\limits_{c1}^{c2}
-                    {\int\limits_{c3}^{c4} {f(x,y)\;dx\;dy} } \cr} $$
-                </div>
+                    <span class="regular">In other words first
+                        integration is along the vertical strip RS and then slide this strip RS horizontally.</span>
 
+                    <span class="regular">Consider the double integral <div class="eq">$$\int\limits_{c1}^{c2}
+                            {\int\limits_{\phi 1(y)}^{\phi 2(y)} {f(x,y)\;dx\;dy} } $$</div></span>
+                    <br>
 
-                <br>
+                    <div class="text-white quater" style="background-color: rgba(200,242,255,1);">
+                        <div class="card-body"><span class="regular"><b>Note</b></span><span
+                                style="text-align: justify;" class="regular">Here we note
+                                that when the
+                                limits of the inner integral remain the function of y, our first integration should be
+                                w.r.t.
+                                x.</span></div>
+                    </div>
+                    <br>
 
-                <span class="regular">In L.H.S., the
-                    order of integration is first with respect to x and then with respect to y.</span><br>
-                <span class="regular">In R.H.S. the order of integration is first with respect to y and then with
-                    respect to
-                    x.</span>
-                <br>
-                <span class="sub-head">Case (ii)</span>
-                <br>
-                <span class="regular">Consider the double integral $$\int\limits_{c1}^{c2} {\int\limits_{x1}^{x2}
-                    {f(x,y)\;} } dx\;dy$$</span>
-                <span class="regular">Suppose x1 and x2 are functions of y say x1 = f(y), x2 = (y) and c1
-                    and c2 are constants then the region of integration is bounded by the curves x1 = f(y) and x2 = 
-                    (y)
-                    and the lines y = c1 and y = c2.</span>
-                <span class="regular">
-                    <center>
-                        <div class="v110_48"></div><span class="v110_49">Fig 1</span><br>
-                    </center>
-                </span>
-                <br>
-                <span class="regular">This region is shown in figure.
-                    Here we integrate f(x, y) first w.r.t. x. Keeping pression w.r.t.y. i.e., first integration is along
-                    the
-                    horizontal strip PQ and then slide this strip PQ vertically.</span>
-
-                <br>
-                <span class="sub-head">Case (iii)</span>
-                <br>
-                <span class="regular">Now consider the double integral $$\int\limits_{c1}^{c2} {\int\limits_{y1}^{y2}
-                    {f(x,y)\;} } dx\;dy$$</span>
-
-                <span class="regular">Suppose y1
-                    and y2 are functions of x say y1 = f(x), y2 =  (x) and the lines x = c1 and x = c2.</span>
-                <span class="regular">
-                    <center>
-                        <div class="v110_54"></div><span class="v110_55">Fig 2 </span><br>
-
-                    </center>
-
-
-                </span>
-                <span class="regular">This region is shown in figure. Here we integrate f(x, y) first w.r.t. y keeping x
-                    as a
-                    constant and integrate the resulting expressions w.r.t. x.</span>
-
-                <span class="regular">In other words first
-                    integration is along the vertical strip RS and then slide this strip RS horizontally.</span>
-
-                <span class="regular">Consider the double integral <div class="eq">$$\int\limits_{c1}^{c2}
-                        {\int\limits_{\phi
-                        1(y)}^{\phi 2(y)} {f(x,y)\;dx\;dy} } $$</div></span>
-
-                <div class="text-white quater" style="background-color: rgba(200,242,255,1);">
-                    <div class="card-body"><span class="regular"><b>Note</b></span><span style="text-align: justify;"
-                            class="regular">Here we note
-                            that when the
-                            limits of the inner integral remain the function of y, our first integration should be
-                            w.r.t.
-                            x.</span></div>
-                </div>
-                <br>
-
-                <div class="text-white quater" style="background-color: #DDA0DD;">
-                    <div class="card-body"><span class="regular"><b>Example 1 :</b><span style="text-align: justify;"
-                                class="regular">Evaluation of
-                                definite integral $$\int\limits_0^{{\pi \over
-                                2}} {{{\sin }^m}} x.{\cos ^n}x\;dx$$ when both m and n are
+                    <div class="text-white quater" style="background-color: #DDA0DD;">
+                        <div class="card-body"><span class="example">Example 1 :</span><span
+                                style="text-align: justify;" class="regular">Evaluation of
+                                definite integral <div class="eq">$$\int\limits_0^{{\pi \over
+                                    2}} {{{\sin }^m}} x.{\cos ^n}x\;dx$$</div> when both m and n are
                                 positive
                                 integers</span>
+                        </div>
                     </div>
-                </div>
-                <br>
-                <div class="regular"><span class="regular">Evaluation of definite integral <div class="eq">
-                            $$\int\limits_0^{{\pi \over
-                            2}} {{{\sin }^m}} x.{\cos ^n}x\;dx$$ </div>when both m and n are
-                        positive
-                        integers</span>
-                    <span class="regular">Solution</span><span class="regular">Introduce the notation <div class="eq">
-                            $$\mathop
-                            I\nolimits_{m,n} = \int\limits_0^{{\pi \over 2}} {{{\sin }^m}x.{{\cos }^n}x} \;dx
-                            \;\;\;\;\;\;\;\;\;\;\;.........{\rm{(1)}}$$ </div></span><span class="regular">And using the
-                        reduction
-                        formula,
-                        we obtain<div class="eq"> $$\eqalign{
-                            \mathop I\nolimits_{m,n} & = \int\limits_0^{{\pi \over 2}} {{{\sin }^m}x.{{\cos }^n}x} \;dx
-                            \cr
-                            & = \left[ { - {{{{\sin }^{m - 1}}x.{{\cos }^{n + 1}}} \over {m + n}}\mathop
-                            \;\limits_0^{{\pi \over 2}} + {{m - 1} \over {m + n}}} \right]\int\limits_0^{{\pi \over 2}}
-                            {{{\sin }^{m - 2}}x.{{\cos }^n}x\;dx} \cr} $$</div><span class="regular">Since the
-                            first term
-                            on R.H.S is zero at both the limits, we get <div class="eq">$$\mathop I\nolimits_{m,n} = {{m - 1} \over {m +
-                            1}}.\mathop I\nolimits_{m - 2,n} \;\;\;\;\;\;\;\;\;\;\;.........{\rm{(2)}}$$</div></span>
+                    <br>
+                    <div class="regular">
+                        <span class="solution"><b>Solution</b></span>
+                        <div style="margin-left: 4%;">
+                            <span class="regular">Introduce the notation <div class="eq">
+                                    $$\mathop
+                                    I\nolimits_{m,n} = \int\limits_0^{{\pi \over 2}} {{{\sin }^m}x.{{\cos }^n}x} \;dx
+                                    \;\;\;\;\;\;\;\;\;\;\;.........{\rm{(1)}}$$ </div></span><span class="regular">And
+                                using
+                                the
+                                reduction
+                                formula,
+                                we obtain<div class="eq"> $$\eqalign{
+                                    \mathop I\nolimits_{m,n} & = \int\limits_0^{{\pi \over 2}} {{{\sin }^m}x.{{\cos
+                                    }^n}x}
+                                    \;dx
+                                    \cr
+                                    & = \left[ { - {{{{\sin }^{m - 1}}x.{{\cos }^{n + 1}}} \over {m + n}}\mathop
+                                    \;\limits_0^{{\pi \over 2}} + {{m - 1} \over {m + n}}} \right]\int\limits_0^{{\pi
+                                    \over
+                                    2}}
+                                    {{{\sin }^{m - 2}}x.{{\cos }^n}x\;dx} \cr} $$</div><span class="regular">Since the
+                                    first term
+                                    on R.H.S is zero at both the limits, we get <div class="eq">$$\mathop
+                                        I\nolimits_{m,n} =
+                                        {{m
+                                        - 1} \over {m +
+                                        1}}.\mathop I\nolimits_{m - 2,n} \;\;\;\;\;\;\;\;\;\;\;.........{\rm{(2)}}$$
+                                    </div>
+                                </span>
 
 
-                        <span class="regular">Using this recurrence relation, we obtain <div class="eq">$$\eqalign{
-                                \mathop I\nolimits_{m - 2,n} & = {{m - 5} \over {m + n - 2}}.\mathop I\nolimits_{m -
-                                4,n}
-                                \;\;\;\;\;\;\;\;\;\;\;.........{\rm{(3)}}
-                                \cr
-                                \mathop I\nolimits_{m - 4,n} & = {{m - 5} \over {m + n - 4}}.\mathop I\nolimits_{m -
-                                6,n}
-                                \cr - - - - & - - - - - - - - - - - - - - - \cr
-                                \mathop I\nolimits_{3,n} & = {2 \over {3 + n}}.\mathop I\nolimits_{1,n}
-                                \;When\;m\;is\;odd
-                                \cr
-                                \mathop I\nolimits_{2,n} & = {1 \over {2 + n}}.\mathop I\nolimits_{0,n}
-                                \;When\;m\;is\;even
-                                \cr}$$</div></span>
-                        <span class="sub-head">Observe that</span>
-                        <div class="eq">$$\eqalign{
-                            \mathop I\nolimits_{1,n} & = \int\limits_0^{{\pi \over 2}} {\sin x.{{\cos }^n}x\;dx} = -
-                            {{{{\cos }^{n + 1}}x} \over {n + 1}}_0^{{\pi \over 2}} + 0 = {1 \over {n = 1}}
-                            \;\;\;\;\;\;\;\;\;\;\;.........{\rm{(4)}} \cr
-                            & and \cr
-                            \mathop I\nolimits_{0,n} & = \int\limits_0^{{\pi \over 2}} {{{\cos }^n}x\;dx} \cr}$$ </div>
-                        <div class="regular"></div>
-                        <div class="name"></div>
-                        <div class="regular"></div>
-                        <div class="regular"></div><span class="regular">Substuting these
-                            values, we
-                            have</span>
-                        <span class="sub-head">(a) When m is odd and n may be odd or even</span><span
-                            class="regular">rewritting</span><span class="sub-head">(b)
-                            When m is even and n is odd</span><span class="sub-head">(c) When m is even and n is
-                            even</span>
-
+                                <span class="regular">Using this recurrence relation, we obtain <div class="eq">
+                                        $$\eqalign{
+                                        \mathop I\nolimits_{m - 2,n} & = {{m - 5} \over {m + n - 2}}.\mathop
+                                        I\nolimits_{m -
+                                        4,n}
+                                        \;\;\;\;\;\;\;\;\;\;\;.........{\rm{(3)}}
+                                        \cr
+                                        \mathop I\nolimits_{m - 4,n} & = {{m - 5} \over {m + n - 4}}.\mathop
+                                        I\nolimits_{m -
+                                        6,n}
+                                        \cr - - - - & - - - - - - - - - - - - - - - \cr
+                                        \mathop I\nolimits_{3,n} & = {2 \over {3 + n}}.\mathop I\nolimits_{1,n}
+                                        \;When\;m\;is\;odd
+                                        \cr
+                                        \mathop I\nolimits_{2,n} & = {1 \over {2 + n}}.\mathop I\nolimits_{0,n}
+                                        \;When\;m\;is\;even
+                                        \cr}$$</div></span>
+                                <span class="sub-head">Observe that</span>
+                                <div class="eq">$$\eqalign{
+                                    \mathop I\nolimits_{1,n} & = \int\limits_0^{{\pi \over 2}} {\sin x.{{\cos }^n}x\;dx}
+                                    = -
+                                    {{{{\cos }^{n + 1}}x} \over {n + 1}}_0^{{\pi \over 2}} + 0 = {1 \over {n = 1}}
+                                    \;\;\;\;\;\;\;\;\;\;\;.........{\rm{(4)}} \cr
+                                    & and \cr
+                                    \mathop I\nolimits_{0,n} & = \int\limits_0^{{\pi \over 2}} {{{\cos }^n}x\;dx} \cr}$$
+                                </div>
+                                <div class="regular"></div><span class="regular">Substuting these
+                                    values, we
+                                    have</span>
+                                <span class="sub-head">(a) When m is odd and n may be odd or even</span>
+                                <div class="eq">
+                                    $$\eqalign{
+                                    {I_{m,n}} & = {{(m - 1)} \over {(m + n)}}.{{(m - 3)} \over {(m + n - 2)}} \times
+                                    {{(m -
+                                    5)}
+                                    \over {(m + n - 4)}}......{2 \over {3 + n}}.{1 \over {1 + n}} \cr}$$
+                                </div>
+                                <span class="regular">rewritting</span>
+                                <div class="eq">
+                                    $$\eqalign{{I_{m,n}} & = {{(m - 1)(m - 3)(m - 5)......} \over {(m + n)(m + n -
+                                    2){\rm{
+                                    }}......}} \times {1 \over {2 + n}}\left[ {{{n - 1} \over n}{\rm{ }}{\rm{. }}{{n -
+                                    3}
+                                    \over
+                                    {n - 2}}{\rm{ }}........{\rm{ }}{2 \over 3}} \right] \cr} $$
+                                </div>
+                                <span class="sub-head">(b)
+                                    When m is even and n is odd</span>
+                                <div class="eq">
+                                    $$\eqalign{{I_{m,n}} & = {{(m - 1)(m - 3)(m - 5)......{\rm{ 2 }}{\rm{. 1}}} \over
+                                    {(m +
+                                    n)(m
+                                    + n - 2)(m + n - 4){\rm{ }}......{\rm{ (}}3 + n{\rm{) (}}1 + n{\rm{)}}}}. \times
+                                    \left[
+                                    {{{(n - 1)(n - 3)(n - 5)......} \over {(n - 1)(n - 3)(n - 5)......}}} \right] \cr}
+                                    $$
+                                </div><span class="sub-head">(c) When m is even and n is
+                                    even</span>
+                                <div class="eq">
+                                    $$\eqalign{{I_{m,n}} = {{(m - 1)(m - 3){\rm{ }}......{\rm{ 1}}} \over {(m + n)(m + n
+                                    -
+                                    2){\rm{ }}......{\rm{ (n + 2)}}}} \times {1 \over {2 + n}}\left[ {{{n - 1} \over
+                                    n}{\rm{
+                                    }}{\rm{. }}{{n - 3} \over {n - 2}}{\rm{ }}........{\rm{ }}{2 \over 3}} \right] \cr}
+                                    $$
+                                </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
