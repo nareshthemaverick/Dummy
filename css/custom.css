@@ -26,9 +26,9 @@ a { text-decoration: none; }
 .contenedor-menu {
 	width: 60%; 
 	margin-left: 35%;
-	margin-top: 25%;
+	margin-top: 13%;
 	display: inline-block;
-	line-height: 18px;
+	line-height: 12px;
 }
 
 .contenedor-menu .menu { width: 100%; }
@@ -223,6 +223,19 @@ a { text-decoration: none; }
 	margin-right: 2%;
 	overflow: hidden;
   }
+  .v152_2 {
+	width: 32px;
+	height: 32px;
+	background: url("../images/v152_2.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	opacity: 1;
+	position: absolute;
+	top: 381px;
+	left: 577px;
+	overflow: hidden;
+  }
   .change{
 	position: absolute;bottom: 0;left: 0; margin-bottom:2%
   }
@@ -255,7 +268,8 @@ a { text-decoration: none; }
     border-radius: 0.25rem;
 	width: 70%;
             margin-left: 5%;
-            margin-top: 10%;
+            margin-top: 4%;
+
 }
 .card-hanging{
 	height: 40px;
@@ -270,11 +284,21 @@ a { text-decoration: none; }
     background-clip: border-box;
     border: 1px solid rgba(0,0,0,.125);
     border-radius: 0.25rem;
-	width: 30%;
+	width: 40%;
             margin-left: 10%;
             margin-top: 2%;
 }
-
+.spl{
+	border-left:20px solid #005AC3;border-right:10px solid #005AC3;	height: 80px;		
+}
+.card-body-s {
+	flex: 1 1 auto;
+	padding: 1rem 1rem;
+  }
+  .card-body-sa {
+	/* flex: 1 1 auto; */
+	padding: 5px 1rem;
+  }
   @media screen and (max-width: 700px) {
 	div.change {
 		position: relative;
@@ -284,7 +308,7 @@ a { text-decoration: none; }
 	}
 	.shell{
 		background-color:#f3f3f3;
-		margin-left: 40%;
+		margin-left: 33%;
 	  }
 	  .contenedor-menu {
 		width: 300%; 
@@ -316,6 +340,23 @@ a { text-decoration: none; }
 			  margin-top: 10%;
   }
   .card-hanging{
-	display: none;
+	height: 50px;
+	position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+	width: 85%;
+            margin-left: 10%;
+            margin-top: 2%;
+}
+.spl{
+	border-left:20px solid #005AC3;border-right:10px solid #005AC3;	height: 140px;		
 }
   }
