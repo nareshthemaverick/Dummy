@@ -209,7 +209,6 @@ a { text-decoration: none; }
 	font-weight: Bold;
 	font-size: 20px;
 	opacity: 1;
-	text-align: left;
   }
   .v110_64 {
 	width: 274px;
@@ -253,6 +252,7 @@ a { text-decoration: none; }
 	  width: 70%;
 	  margin-left: 5%;
 	  margin-top: 2%;
+	  overflow-y: scroll;
   }
 .card-head{
   position: relative;
@@ -322,6 +322,7 @@ a { text-decoration: none; }
 		width: 85%;
 		margin-left: 5%;
 		margin-top: 2%;
+		overflow-y: scroll;
 	}
   .card-head{
 	position: relative;
@@ -338,6 +339,10 @@ a { text-decoration: none; }
 	  width: 85%;
 			  margin-left: 5%;
 			  margin-top: 10%;
+  }
+  .card-body-sa {
+	/* flex: 1 1 auto; */
+	padding: 16px 1rem;
   }
   .card-hanging{
 	height: 50px;
