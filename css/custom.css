@@ -185,7 +185,7 @@ a { text-decoration: none; }
   .v110_49 {
 	width: 47px;
 	color: rgba(0,0,0,1);
-	position: absolute;
+	/* position: absolute; */
 	font-weight: Bold;
 	font-size: 20px;
 	opacity: 1;
@@ -253,7 +253,15 @@ a { text-decoration: none; }
 	  margin-left: 5%;
 	  margin-top: 2%;
 	  overflow-y: scroll;
+	  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  height: 70vh;
   }
+
+  .main::-webkit-scrollbar {
+    display: none;
+}
+
 .card-head{
   position: relative;
     display: -ms-flexbox;
@@ -323,6 +331,7 @@ a { text-decoration: none; }
 		margin-left: 5%;
 		margin-top: 2%;
 		overflow-y: scroll;
+		height: 70vh;
 	}
   .card-head{
 	position: relative;
