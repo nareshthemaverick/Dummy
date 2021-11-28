@@ -1,10 +1,11 @@
 $(document).ready(function() {
 	$('.menu li:has(ul)').click(function(e) {
 		e.preventDefault();
-
+		// console.log(this)
 		if($(this).hasClass('activado')) {
-			$(this).removeClass('activado');
-			$(this).children('ul').slideUp();
+			// $(this).removeClass('activado');
+			// console.log(this)
+			// $(this).children('ul').slideUp();
 		} else {
 			$('.menu li ul').slideUp();
 			$('.menu li').removeClass('activado');
