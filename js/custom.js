@@ -4,9 +4,10 @@ $(document).ready(function() {
 		// console.log(this)
 		if($(this).hasClass('activado')) {
 			// $(this).removeClass('activado');
-			// console.log(this)
+			
 			// $(this).children('ul').slideUp();
 		} else {
+			$(this).children('a').children('i').attr('class','fa fa-chevron-up')
 			$('.menu li ul').slideUp();
 			$('.menu li').removeClass('activado');
 			$(this).addClass('activado');
