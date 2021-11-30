@@ -374,3 +374,70 @@ a { text-decoration: none; }
 	border-left:20px solid #005AC3;border-right:10px solid #005AC3;	height: 140px;		
 }
   }
+
+  /* START LOADER CSS */
+.fullpage-loader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	background: #fff;
+	z-index: 9999;
+	opacity: 1;
+	transition: opacity 0.5s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  .fullpage-loader .fullpage-loader__logo {
+	position: relative;
+  }
+  .fullpage-loader .fullpage-loader__logo:after {
+	content: "";
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-animation: shine 2.5s infinite cubic-bezier(0.42, 0, 0.58, 1);
+			animation: shine 2.5s infinite cubic-bezier(0.42, 0, 0.58, 1);
+	background: rgba(255, 255, 255, 0.8);
+	/* FF3.6-15 */
+	/* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 50%, rgba(255, 255, 255, 0) 100%);
+	/* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#00ffffff", endColorstr="#00ffffff",GradientType=1 );
+	/* IE6-9 */
+  }
+  
+  @-webkit-keyframes shine {
+	0% {
+	  transform: translateX(-100%) skew(-30deg);
+	}
+	100% {
+	  transform: translateX(200%) skew(-30deg);
+	}
+  }
+  
+  @keyframes shine {
+	0% {
+	  transform: translateX(-100%) skew(-30deg);
+	}
+	100% {
+	  transform: translateX(200%) skew(-30deg);
+	}
+  }
+  .fullpage-loader--invisible {
+	opacity: 0;
+  }
+  
+  /* END LOADER CSS */
+  code {
+	padding: 0 0.5ch;
+  }
+  
+  img {
+	max-width: 100%;
+  }
