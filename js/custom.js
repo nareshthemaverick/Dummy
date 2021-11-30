@@ -7,10 +7,11 @@ $(document).ready(function() {
 			
 			// $(this).children('ul').slideUp();
 		} else {
-			$(this).children('a').children('i').attr('class','fa fa-chevron-up')
 			$('.menu li ul').slideUp();
 			$('.menu li').removeClass('activado');
+			$('.menu li').children('a').children('i').attr('class','fa fa-chevron-down')
 			$(this).addClass('activado');
+			$(this).children('a').children('i').attr('class','fa fa-chevron-up')
 			$(this).children('ul').slideDown();
 		}
 
