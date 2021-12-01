@@ -308,14 +308,19 @@ a { text-decoration: none; }
 	/* flex: 1 1 auto; */
 	padding: 5px 1rem;
   }
+
+  .myvideo {
+	width: 700px;
+	}
   @media screen and (max-width: 700px) {
 	.overlay-content {
 		position: relative;
 		width: 100%;
 		margin-top: 10px;
 	  }
-	video {
+	.myvideo {
 		height: 25vh;
+		width: auto;
 	}
 	div.change {
 		position: relative;
@@ -485,9 +490,7 @@ a { text-decoration: none; }
 	font-size: 30px;
   }
 
-  video {
-	width: 700px;
-	}
+
   
   @media screen and (max-height: 450px) {
 	.overlay a {font-size: 20px}
