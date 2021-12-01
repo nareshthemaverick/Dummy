@@ -41,11 +41,13 @@ $(document).ready(function () {
 function openNav() {
 	var myVideo = document.getElementById("video");
 	myVideo.play()
+	document.getElementById("myNav").style.display = "block";
 	document.getElementById("myNav").style.width = "100%";
   }
   
   function closeNav() {
 	var myVideo = document.getElementById("video");
 	myVideo.pause()
+	document.getElementById("myNav").style.display = "none";
 	document.getElementById("myNav").style.width = "0%";
   }
