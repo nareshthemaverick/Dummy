@@ -433,7 +433,7 @@ a { text-decoration: none; }
 	}
   }
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 768px) {
 	  * {
 		  font-family: Roboto;
 	  }
@@ -523,8 +523,8 @@ a { text-decoration: none; }
 	}
 	.main{
 		background-color: white;
-		width: 85%;
-		margin-left: 5%;
+		width: 95%;
+		margin-left: 1%;
 		margin-top: 2%;
 		overflow-y: scroll;
 		height: 70vh;
@@ -541,16 +541,15 @@ a { text-decoration: none; }
 	  background-clip: border-box;
 	  border: 1px solid rgba(0,0,0,.125);
 	  border-radius: 0.25rem;
-	  width: 85%;
-			  margin-left: 5%;
-			  margin-top: 10%;
+	  width: 95%;
+			  margin-left: 1%;
   }
   .card-body-sa {
 	/* flex: 1 1 auto; */
-	padding: 16px 1rem;
+	padding: 6px 1rem;
   }
   .card-hanging{
-	height: 50px;
+	height: 15px;
 	position: relative;
     display: -ms-flexbox;
     display: flex;
@@ -558,15 +557,18 @@ a { text-decoration: none; }
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #fff;
+    background-color: #f3f3f3;
     background-clip: border-box;
-    border: 1px solid rgba(0,0,0,.125);
+    border: 1px solid #f3f3f3;
     border-radius: 0.25rem;
-	width: 85%;
-            margin-left: 8%;
+	width: 100%;
+	text-align: center;
+	font-size: 10.5px;
+            margin-left: 1%;
+			margin-right: 1%;
             margin-top: 2%;
 }
 .spl{
-	border-left:20px solid #005AC3;border-right:10px solid #005AC3;	height: 140px;		
+	border-left:20px solid #005AC3;border-right:10px solid #005AC3;	height: 90px;		
 }
   }
