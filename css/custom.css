@@ -433,7 +433,7 @@ a { text-decoration: none; }
 	}
   }
 
-  @media screen and (max-width: 1080px) {
+  @media screen and (max-width: 768px) {
 	  * {
 		  font-family: Roboto;
 	  }
@@ -512,7 +512,7 @@ a { text-decoration: none; }
 	}
 	.shell{
 		background-color:#f3f3f3;
-		margin-left: 31%;
+		margin-left: 27%;
 	  }
 	  .contenedor-menu {
 		width: 180%; 
@@ -570,3 +570,9 @@ a { text-decoration: none; }
 	border-left:20px solid #005AC3;border-right:10px solid #005AC3;	height: 90px;		
 }
   }
+
+  /* @media screen and (max-width: 1079px) and (min-width: 768) {
+	.shell {
+		width: 30%
+	}
+	} */
