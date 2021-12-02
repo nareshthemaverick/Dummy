@@ -11311,7 +11311,7 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
   margin-left: 0;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1080px) {
   #sidebar-wrapper {
     margin-left: 0;
   }
