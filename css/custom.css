@@ -512,7 +512,7 @@ a { text-decoration: none; }
 	}
 	.shell{
 		background-color:#f3f3f3;
-		margin-left: 34%;
+		margin-left: 31%;
 	  }
 	  .contenedor-menu {
 		width: 180%; 
@@ -523,8 +523,7 @@ a { text-decoration: none; }
 	}
 	.main{
 		background-color: white;
-		width: 95%;
-		margin-left: 1%;
+		width: 97%;
 		margin-top: 2%;
 		overflow-y: scroll;
 		height: 70vh;
@@ -541,8 +540,7 @@ a { text-decoration: none; }
 	  background-clip: border-box;
 	  border: 1px solid rgba(0,0,0,.125);
 	  border-radius: 0.25rem;
-	  width: 95%;
-			  margin-left: 1%;
+	  width: 97%;
   }
   .card-body-sa {
 	/* flex: 1 1 auto; */
