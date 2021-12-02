@@ -423,6 +423,10 @@ a { text-decoration: none; }
 	font-size: 60px;
 	z-index: 10;
   }
+
+  .center-align {
+	  margin-top: 12%;
+  }
   
   @media screen and (max-height: 450px) {
 	.overlay a {font-size: 20px}
@@ -485,6 +489,10 @@ a { text-decoration: none; }
 		display: block; 
 	  }
 
+	  .center-align {
+		margin-top: 45%;
+	}
+
 	.overlay .closebtn {
 		position: absolute;
 		top: 36%;
@@ -512,7 +520,7 @@ a { text-decoration: none; }
 	}
 	.shell{
 		background-color:#f3f3f3;
-		margin-left: 27%;
+		margin-left: 26%;
 	  }
 	  .contenedor-menu {
 		width: 180%; 
@@ -562,17 +570,10 @@ a { text-decoration: none; }
 	width: 100%;
 	text-align: center;
 	font-size: 10.5px;
-            margin-left: 1%;
-			margin-right: 1%;
+            margin-left: 0.2%;
             margin-top: 2%;
 }
 .spl{
 	border-left:20px solid #005AC3;border-right:10px solid #005AC3;	height: 90px;		
-}
+	}	
   }
-
-  /* @media screen and (max-width: 1079px) and (min-width: 768) {
-	.shell {
-		width: 30%
-	}
-	} */
