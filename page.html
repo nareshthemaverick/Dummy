@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <script type="text/javascript"
+        src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Learnengg</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+
+<body style="background-color: #f3f3f3;">
+    <div class=" fullpage-loader">
+        <div class="fullpage-loader__logo">
+            <!-- this img tag pointing to an external image is here for an example of what not to do, read the page to understand why to use a base64 image -->
+            <!-- 		<img src="https://cdn.shopify.com/s/files/1/0497/3073/files/logosmall_400x.png?v=1539650409" /> -->
+            <img
+                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAAA0CAYAAADPCHf8AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyBpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOkYzNUY1RDhDRjQxNDExRTZCN0ZBRjcyMTg2RUJGQzEzIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOkYzNUY1RDhERjQxNDExRTZCN0ZBRjcyMTg2RUJGQzEzIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6RjM1RjVEOEFGNDE0MTFFNkI3RkFGNzIxODZFQkZDMTMiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RjM1RjVEOEJGNDE0MTFFNkI3RkFGNzIxODZFQkZDMTMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4GWp6fAAA3qUlEQVR42ux9CZwcRb3/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" />
+        </div>
+    </div>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar-->
+        <!-- Page content wrapper-->
+        <div id="page-content-wrapper" class="shell">
+            <!-- Top navigation-->
+            <div class="card-head">
+                <div class="spl">
+                    <div style="height: 60%;">
+                        <div class="card-body-s">
+                            <span><b>Evaluation
+                                    of double integrals</b></span>
+                        </div>
+                    </div>
+                    <div style="background-color:#f3f3f3;height: 40%;">
+                        <div class="card-body-sa">&nbsp;<i class="fa fa-eye"></i> 30
+                            &nbsp;&nbsp;&nbsp;<i class="fa fa-thumbs-up"></i> 30 &nbsp;&nbsp;&nbsp;<i
+                                class="fa fa-thumbs-down"></i> 30
+                            &nbsp;&nbsp;<i class="fa fa-share-alt"></i> &nbsp; &nbsp; <i class="fa fa-download"></i>
+                            &nbsp; &nbsp;<i class="fa fa-bookmark"></i> </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Page content-->
+            <div class="main">
+                <br>
+                <div class="container-fluid" style="margin-right: 2%;margin-left: 2%;">
+                    <div style="font-size: 20px;">
+                        <span class="main-head"><b>Evaluation
+                                of double integrals</b>
+
+                            <img style="cursor: pointer;" onclick="openNav()"
+                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJySURBVHgB7Zc/U9tAEMXfya5w4wJaECVUMFAzdNCFPw0DZhCfAFNTQAF1nJLKYcYCKkg6SgZamKSjjKGFggKogMs+KZ6QoNMpikSDfjO2b27vrOfd2/UeUFBQUPC+UZ2BnpsbR6m0JEMXWaH1rbx/Vbu7n5GSQKBeWGjKh4f8aCjfX0UKlJ6f96BUE3nz/Lyq9vYatmVBJB3HlfXHan+/rcR732R+CPnTFi/2m4ziqCFx1EcZjr+Y9spIKm5gABgZAUZHge7ucO7qSh7bBg4Pgetr2ze4UZN6aqqKSmVdhvUIc6MMG5UKMD0NTE6+tvX2hq+xMeDoKBR6f4+k6FptRT42JJmqhiXVslXc2loowgZ/wOAgsLVlFfmrYjRFmAsLTqyVnksirgPXco+NUokhdZEAs8Cenuiw3twgFu7hec0Is0CTJ+pylre344UymTLCLLCvz2jC6SmwuRkmRhTM9IxIJ5DQg61W6NGTkz9tnTKUAQ7+F6XC85oT5jJDD8V5giVoYgKYmXltYwHPCLPAs7PoLCYUNjsLdHVF2/nvkhHmEJ+fR8+zcC8umsWRgwNkhVngxUV0ltpqHPfYauU/EJ8k9MTlJRLDs5fEe1qzN2wjAfECHx7C/1ZTvXsJ17A2co8F6bC/B62X1ss2oewHNZLAjGbGsj52aiRDyWTieeWRsAnzffX3nPa8Kh4f6yJ2PWJL0LD+QJb3EDP02rDJKB2OK03EhgyXggmlbvH0tMwQf8JboHXsc4L23vc9WTcchP7url+uCF/CS1Ot1pDJFeTHTvDwFPy+dvLy5DgfYrrbNLQlVDuq1TpGQUFBQUEqfgKFnsXaWFmkaQAAAABJRU5ErkJggg==" />
+                        </span>
+                    </div>
+
+
+
+                    <br>
+                    <span class=" regular">We know that the double integral over the region 'R' of a function f(x,
+                        y)<br>
+                        is.</span>
+                    <div class="eq">
+                        $$\int\!\!\!\int\limits_R {f(x,y)\;} dx\;dy \;\;\;\;\;\;\;\;\;\;\;.........{\rm{(1)}}$$
+                    </div>
+                    <br>
+                    <span class="sub-head">Case (i)</span>
+                    <br>
+                    <span class="regular">Now let 'R' be
+                        the region bounded by the lines x = c1, x = c2, y = c3 and y = c4 where c1, c2, c3, c4 are
+                        constants.</span>
+
+                    <br>
+                    <span class="regular">Since we know the region of integration 'R' the double integral.</span>
+                    <div class="eq">
+                        $$\int\!\!\!\int\limits_R {f(x,y)\;} dx\;dy{\text{ can be written as}} \\
+                        \int\limits_{c3}^{c4} {\int\limits_{c1}^{c2} {f(x,y)\;} } dx\;dy
+                        \;\;\;\;\;\;\;\;\;\;\;.........{\rm{(2)}}$$
+                    </div>
+                    <br>
+                    <div class="text-white quater" style="background-color: #7FFFD4;">
+                        <div class="card-body"><span style="text-align: center;" class="regular">(Here we replace
+                                ‘R’ by
+                                putting the limits for both x and
+                                y)</span></div>
+                    </div>
+                    <br>
+                    <div class="text-white quater" style="background-color: rgba(200,242,255,1);">
+                        <div class="card-body">
+                            <div style="width: 15%; float:left; position: relative;">
+                                <span class="regular center-align"><b>Note</b></span>
+                            </div>
+
+                            <div style="width: 85%; float:right">
+                                <span style="text-align: justify;" class="regular"> For 'n'
+                                    subregions, we have
+                                    'n' points P1, P2, ……. Pn. Let f (P1), f (P2), ……. f (Pn) be the values of the
+                                    functions
+                                    at
+                                    the
+                                    points
+                                    Pi. Now from the sum of the products f(Pi) si.</span>
+                            </div>
+                            <br style="clear:both;" />
+                        </div>
+                    </div>
+                    <br>
+                    <div class="eq">
+                        $$\eqalign{
+                        \int\limits_{c3}^{c4} {\int\limits_{c1}^{c2} {f(x,y)\;dx\;dy} } & = \int\limits_{c3}^{c4}
+                        {\int\limits_{c1}^{c2} {f(x,y)\;dx\;dy} } \cr
+                        \int\limits_{c3}^{c4} {\int\limits_{c1}^{c2} {f(x,y)\;dx\;dy} } & = \int\limits_{c1}^{c2}
+                        {\int\limits_{c3}^{c4} {f(x,y)\;dx\;dy} } \cr} $$
+                    </div>
+
+                    <br>
+                    <span class="regular">In L.H.S., the
+                        order of integration is first with respect to x and then with respect to y.</span><br>
+                    <span class="regular">In R.H.S. the order of integration is first with respect to y and then
+                        with
+                        respect to
+                        x.</span>
+                    <br>
+                    <span class="sub-head">Case (ii)</span>
+                    <br>
+                    <span class="regular">Consider the double integral <div class="eq">$$\int\limits_{c1}^{c2}
+                            {\int\limits_{x1}^{x2}
+                            {f(x,y)\;} } dx\;dy$$</div></span>
+                    <span class="regular">Suppose x1 and x2 are functions of y say x1 = f(y), x2 = (y) and c1
+                        and c2 are constants then the region of integration is bounded by the curves x1 = f(y) and
+                        x2 =
+                        
+                        (y)
+                        and the lines y = c1 and y = c2.</span>
+                    <span class="regular">
+                        <center>
+                            <div class="v110_48"></div><span class="sub-head">Fig 1</span><br>
+                        </center>
+                    </span>
+                    <br>
+                    <span class="regular">This region is shown in figure.
+                        Here we integrate f(x, y) first w.r.t. x. Keeping pression w.r.t.y. i.e., first integration
+                        is
+                        along
+                        the
+                        horizontal strip PQ and then slide this strip PQ vertically.</span>
+
+                    <br>
+                    <span class="sub-head">Case (iii)</span>
+                    <br>
+                    <span class="regular">Now consider the double integral <div class="eq">$$\int\limits_{c1}^{c2}
+                            {\int\limits_{y1}^{y2}
+                            {f(x,y)\;} } dx\;dy$$</div></span>
+
+                    <span class="regular">Suppose y1
+                        and y2 are functions of x say y1 = f(x), y2 =  (x) and the lines x = c1 and x = c2.</span>
+                    <span class="regular">
+                        <center>
+                            <div class="v110_54"></div><span class="sub-head">Fig 2</span><br>
+                        </center>
+
+
+                    </span>
+                    <span class="regular">This region is shown in figure. Here we integrate f(x, y) first w.r.t. y
+                        keeping x
+                        as a
+                        constant and integrate the resulting expressions w.r.t. x.</span>
+
+                    <span class="regular">In other words first
+                        integration is along the vertical strip RS and then slide this strip RS horizontally.</span>
+
+                    <span class="regular">Consider the double integral <div class="eq">$$\int\limits_{c1}^{c2}
+                            {\int\limits_{\phi 1(y)}^{\phi 2(y)} {f(x,y)\;dx\;dy} } $$</div></span>
+                    <br>
+
+                    <div class="text-white quater" style="background-color: rgba(200,242,255,1);">
+                        <div class="card-body">
+                            <div style="width: 15%; float:left; position: relative;">
+                                <span class="regular center-align"><b>Note</b></span>
+                            </div>
+                            <div style="width: 85%; float:right">
+                                <span style="text-align: justify;" class="regular"> Here we note
+                                    that when the
+                                    limits of the inner integral remain the function of y, our first integration should
+                                    be
+                                    w.r.t.
+                                    x.</span>
+                            </div>
+                            <br style="clear:both;" />
+                        </div>
+                    </div>
+                    <br>
+
+                    <div class="text-white quater" style="background-color: #E6E6FA;">
+                        <div class="card-body"><span class="example">Example 1 :</span><span
+                                style="text-align: justify;" class="regular">Evaluation of
+                                definite integral <div class="eq">$$\int\limits_0^{{\pi \over
+                                    2}} {{{\sin }^m}} x.{\cos ^n}x\;dx$$</div> when both m and n are
+                                positive
+                                integers</span>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="regular">
+                        <span class="solution"><b>Solution</b></span>
+                        <div style="margin-left: 4%;">
+                            <span class="regular">Introduce the notation <div class="eq">
+                                    $$\mathop
+                                    I\nolimits_{m,n} = \int\limits_0^{{\pi \over 2}} {{{\sin }^m}x.{{\cos }^n}x}
+                                    \;dx
+                                    \;\;\;\;\;\;\;\;\;\;\;.........{\rm{(1)}}$$ </div></span><span class="regular">And
+                                using
+                                the
+                                reduction
+                                formula,
+                                we obtain<div class="eq"> $$\eqalign{
+                                    \mathop I\nolimits_{m,n} & = \int\limits_0^{{\pi \over 2}} {{{\sin }^m}x.{{\cos
+                                    }^n}x}
+                                    \;dx
+                                    \cr
+                                    & = \left[ { - {{{{\sin }^{m - 1}}x.{{\cos }^{n + 1}}} \over {m + n}}\mathop
+                                    \;\limits_0^{{\pi \over 2}} + {{m - 1} \over {m + n}}}
+                                    \right]\int\limits_0^{{\pi
+                                    \over
+                                    2}}
+                                    {{{\sin }^{m - 2}}x.{{\cos }^n}x\;dx} \cr} $$</div><span class="regular">Since
+                                    the
+                                    first term
+                                    on R.H.S is zero at both the limits, we get <div class="eq">$$\mathop
+                                        I\nolimits_{m,n} =
+                                        {{m
+                                        - 1} \over {m +
+                                        1}}.\mathop I\nolimits_{m - 2,n} \;\;\;\;\;\;\;\;\;\;\;.........{\rm{(2)}}$$
+                                    </div>
+                                </span>
+
+
+                                <span class="regular">Using this recurrence relation, we obtain <div class="eq">
+                                        $$\eqalign{
+                                        \mathop I\nolimits_{m - 2,n} & = {{m - 5} \over {m + n - 2}}.\mathop
+                                        I\nolimits_{m -
+                                        4,n}
+                                        \;\;\;\;\;\;\;\;\;\;\;.........{\rm{(3)}}
+                                        \cr
+                                        \mathop I\nolimits_{m - 4,n} & = {{m - 5} \over {m + n - 4}}.\mathop
+                                        I\nolimits_{m -
+                                        6,n}
+                                        \cr - - - - & - - - - - - - - - - - - - - - \cr
+                                        \mathop I\nolimits_{3,n} & = {2 \over {3 + n}}.\mathop I\nolimits_{1,n}
+                                        \;When\;m\;is\;odd
+                                        \cr
+                                        \mathop I\nolimits_{2,n} & = {1 \over {2 + n}}.\mathop I\nolimits_{0,n}
+                                        \;When\;m\;is\;even
+                                        \cr}$$</div></span>
+                                <span class="sub-head">Observe that</span>
+                                <div class="eq">$$\eqalign{
+                                    \mathop I\nolimits_{1,n} & = \int\limits_0^{{\pi \over 2}} {\sin x.{{\cos
+                                    }^n}x\;dx}
+                                    = -
+                                    {{{{\cos }^{n + 1}}x} \over {n + 1}}_0^{{\pi \over 2}} + 0 = {1 \over {n = 1}}
+                                    \;\;\;\;\;\;\;\;\;\;\;.........{\rm{(4)}} \cr
+                                    & and \cr
+                                    \mathop I\nolimits_{0,n} & = \int\limits_0^{{\pi \over 2}} {{{\cos }^n}x\;dx}
+                                    \cr}$$
+                                </div>
+                                <div class="regular"></div><span class="regular">Substuting these
+                                    values, we
+                                    have</span>
+                                <span class="sub-head">(a) When m is odd and n may be odd or even</span>
+                                <div class="eq">
+                                    $$\eqalign{
+                                    {I_{m,n}} & = {{(m - 1)} \over {(m + n)}}.{{(m - 3)} \over {(m + n - 2)}} \times
+                                    {{(m -
+                                    5)}
+                                    \over {(m + n - 4)}}......{2 \over {3 + n}}.{1 \over {1 + n}} \cr}$$
+                                </div>
+                                <span class="regular">rewritting</span>
+                                <div class="eq">
+                                    $$\eqalign{{I_{m,n}} & = {{(m - 1)(m - 3)(m - 5)......} \over {(m + n)(m + n -
+                                    2){\rm{
+                                    }}......}} \times {1 \over {2 + n}}\left[ {{{n - 1} \over n}{\rm{ }}{\rm{. }}{{n
+                                    -
+                                    3}
+                                    \over
+                                    {n - 2}}{\rm{ }}........{\rm{ }}{2 \over 3}} \right] \cr} $$
+                                </div>
+                                <span class="sub-head">(b)
+                                    When m is even and n is odd</span>
+                                <div class="eq">
+                                    $$\eqalign{{I_{m,n}} & = {{(m - 1)(m - 3)(m - 5)......{\rm{ 2 }}{\rm{. 1}}}
+                                    \over
+                                    {(m +
+                                    n)(m
+                                    + n - 2)(m + n - 4){\rm{ }}......{\rm{ (}}3 + n{\rm{) (}}1 + n{\rm{)}}}}. \times
+                                    \left[
+                                    {{{(n - 1)(n - 3)(n - 5)......} \over {(n - 1)(n - 3)(n - 5)......}}} \right]
+                                    \cr}
+                                    $$
+                                </div><span class="sub-head">(c) When m is even and n is
+                                    even</span>
+                                <div class="eq">
+                                    $$\eqalign{{I_{m,n}} = {{(m - 1)(m - 3){\rm{ }}......{\rm{ 1}}} \over {(m + n)(m
+                                    + n
+                                    -
+                                    2){\rm{ }}......{\rm{ (n + 2)}}}} \times {1 \over {2 + n}}\left[ {{{n - 1} \over
+                                    n}{\rm{
+                                    }}{\rm{. }}{{n - 3} \over {n - 2}}{\rm{ }}........{\rm{ }}{2 \over 3}} \right]
+                                    \cr}
+                                    $$
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/custom.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
