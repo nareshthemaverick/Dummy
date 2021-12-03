@@ -568,8 +568,8 @@ a { text-decoration: none; }
     border: 1px solid #f3f3f3;
     border-radius: 0.25rem;
 	width: 100%;
-	text-align: center;
-	font-size: 10.5px;
+	/* text-align: center; */
+	font-size: 9.5px;
             margin-left: 0.2%;
             margin-top: 2%;
 }
