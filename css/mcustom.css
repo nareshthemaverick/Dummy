@@ -31,7 +31,7 @@ a { text-decoration: none; }
 	line-height: 12px;
 }
 
-.contenedor-menu .menu { width: 100%; }
+/* .contenedor-menu .menu { width: 100%; } */
 
 .contenedor-menu ul { list-style: none; }
 
@@ -440,7 +440,7 @@ a { text-decoration: none; }
 		  font-family: Roboto;
 	  }
 
-	  .contenedor-menu .menu { width: 100%; font-size: 14px;}
+	  .contenedor-menu .menu {  font-size: 14px;}
 
 	.example {
 		width: auto;
@@ -529,7 +529,7 @@ a { text-decoration: none; }
 	.main{
 		background-color: white;
 		/* width: 97%; */
-		margin-top: 2%;
+		margin-top: 4%;
 		overflow-y: scroll;
 		height: 70vh;
 		width: 98vw;
@@ -549,6 +549,7 @@ a { text-decoration: none; }
 	  border-radius: 0.25rem;
 	  width: 98vw;
 		margin-left: 1%;
+		margin-top: 1%;
 	
   }
   .card-body-sa {
