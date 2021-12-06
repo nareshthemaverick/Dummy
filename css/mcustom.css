@@ -425,6 +425,17 @@ a { text-decoration: none; }
   .center-align {
 	  margin-top: 12%;
   }
+
+  .sidebar-title {
+	  background-color: #292D44;
+	  color: white;
+	  font-weight: Bold;
+	  font-size: 16px;
+	  opacity: 1;
+	  text-align: left;
+	  height: 40px;
+	  padding: 10px;
+  }
   
   @media screen and (max-height: 450px) {
 	.overlay a {font-size: 20px}
@@ -504,7 +515,7 @@ a { text-decoration: none; }
 		width: 100%;
 		margin-top: 10px;
 		top: 36%;
-    left: 1%;
+    	left: 1%;
 	  }
 	.myvideo {
 		height: 25vh;
@@ -525,6 +536,7 @@ a { text-decoration: none; }
 		margin-top: 2%;
 		display: inline-block;
 		line-height: 18px;
+		width: 65vw;
 	}
 	.main{
 		background-color: white;

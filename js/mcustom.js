@@ -41,7 +41,7 @@ $(document).ready(function () {
 function openNav() {
 	var myVideo = document.getElementById("video");
 	myVideo.play()
-	document.getElementById("myNav").style.width = "100%";
+	document.getElementById("myVideo").style.width = "100%";
   }
   
   function openSidebar() {
@@ -53,9 +53,9 @@ function openNav() {
 	  }
 	
   }  
-  function closeNav() {
+  function closeVideo() {
 	var myVideo = document.getElementById("video");
 	myVideo.pause()
 
-	document.getElementById("myNav").style.width = "0%";
+	document.getElementById("myVideo").style.width = "0%";
   }
