@@ -88,6 +88,23 @@ a { text-decoration: none; }
 	border-radius: 15px;
 }
 
+.card-column-head {
+	width: 10%;
+	display: table-cell;
+	padding: 10px;
+	vertical-align: middle;
+	text-align: center;
+	border-bottom-left-radius: 15px;
+	border-top-left-radius: 15px;
+
+}
+
+.card-column-content {
+	width: 90%;
+	display: table-cell;
+	padding: 10px;
+}
+
 .main-head {
     width: auto;
     color: black;
