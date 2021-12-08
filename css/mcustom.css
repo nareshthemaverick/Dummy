@@ -302,7 +302,7 @@ a { text-decoration: none; }
 
 }
 .card-hanging{
-	height: 40px;
+	height: 15px;
 	position: relative;
     display: -ms-flexbox;
     display: flex;
@@ -310,12 +310,14 @@ a { text-decoration: none; }
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
-    background-color: #fff;
+    background-color: #f3f3f3;
     background-clip: border-box;
-    border: 1px solid rgba(0,0,0,.125);
+    border: 1px solid #f3f3f3;
     border-radius: 0.25rem;
-	width: 45%;
-            margin-left: 8%;
+	width: 100%;
+	/* text-align: center; */
+	font-size: 18px;
+            margin-left: 0.2%;
             margin-top: 2%;
 }
 .spl{
