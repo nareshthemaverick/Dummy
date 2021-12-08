@@ -254,10 +254,7 @@ a { text-decoration: none; }
 	  background-color: white;
 	  /* margin-left: 2%; */
 	  margin-top: 2%;
-	  overflow-y: scroll;
-	  -ms-overflow-style: none;  /* IE and Edge */
-  	scrollbar-width: none;  /* Firefox */
-  	height: 70vh;
+
   }
 
   .main::-webkit-scrollbar {
@@ -532,6 +529,10 @@ a { text-decoration: none; }
 	.shell{
 		background-color:#f3f3f3;
 		width: 100vw;
+		overflow-y: scroll;
+		-ms-overflow-style: none;  /* IE and Edge */
+		scrollbar-width: none;  /* Firefox */
+		height: 92vh;
 		/* text-align:center; */
 	  }
 	  .contenedor-menu {
@@ -544,8 +545,6 @@ a { text-decoration: none; }
 		background-color: white;
 		/* width: 97%; */
 		margin-top: 4%;
-		overflow-y: scroll;
-		height: 70vh;
 		width: 98vw;
 		margin-left: 1%;
 	}
