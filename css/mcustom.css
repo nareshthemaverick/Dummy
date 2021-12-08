@@ -261,6 +261,30 @@ a { text-decoration: none; }
     display: none;
 }
 
+.card-container {
+	display: table;
+	color: #000;
+  }
+
+  .card-column-head {
+	width: 10%;
+	display: table-cell;
+	padding: 10px;
+	vertical-align: middle;
+	text-align: center;
+	border-bottom-left-radius: 15px;
+	border-top-left-radius: 15px;
+
+}
+
+.card-column-content {
+	width: 90%;
+	display: table-cell;
+	padding: 10px;
+	border-bottom-right-radius: 15px;
+	border-top-right-radius: 15px;
+}
+
 .card-head{
   position: relative;
     display: -ms-flexbox;
@@ -385,19 +409,9 @@ a { text-decoration: none; }
 	z-index: 1;
 	top: 0;
 	left: 0;
-	background-color: rgb(0,0,0);
-	background-color: rgba(0,0,0, 0);
+	background-color: rgba(0,0,0, 1);
 	overflow-x: hidden;
 	/* transition: 0.5s; */
-  }
-  
-  .overlay-content {
-	position: relative;
-	top: 36%;
-    left: 10%;
-	width: 100%;
-	text-align: center;
-	margin-top: 30px;
   }
   
   .overlay a {
@@ -445,7 +459,7 @@ a { text-decoration: none; }
 	}
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1080px) {
 	  * {
 		  font-family: Roboto;
 	  }
@@ -488,13 +502,11 @@ a { text-decoration: none; }
 	}
 
 	.regular {
-		width: 95%;
 		color: rgba(0,0,0,1);
 		font-weight: normal;
 		font-size: 12px;
 		opacity: 1;
 		text-align: left;
-		display: block; 
 	  }
 
 	  .center-align {
@@ -514,11 +526,10 @@ a { text-decoration: none; }
 		width: 100%;
 		margin-top: 10px;
 		top: 36%;
-    	left: 1%;
 	  }
 	.myvideo {
-		height: 25vh;
-		width: auto;
+		width: 100vw;
+		height: auto;
 	}
 	div.change {
 		position: relative;
