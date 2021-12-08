@@ -86,6 +86,16 @@ a { text-decoration: none; }
 	border-radius: 15px;
 }
 
+.modal.modal-rel {
+    position: absolute;
+    z-index: 51;
+}
+
+.modal-backdrop.modal-rel-backdrop {
+    position: absolute;
+    z-index: 50;
+}
+
 .card-column-head {
 	width: 10%;
 	display: table-cell;

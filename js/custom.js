@@ -38,6 +38,14 @@ $(document).ready(function () {
 	});
 });
 
+$('.js-modal-rel-trigger').click(function() {
+    var modalId = $(this).attr('data-target');
+    $(modalId).modal();
+
+    $('.modal-backdrop').addClass('modal-rel-backdrop').appendTo($(modalId).parent());
+    $('body').removeClass('modal-open');
+});
+
 function openNav() {
 	var myVideo = document.getElementById("video");
 	myVideo.play()
