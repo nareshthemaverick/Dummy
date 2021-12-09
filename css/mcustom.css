@@ -157,7 +157,6 @@ a { text-decoration: none; }
 .eq{
 	width:100%;
 	overflow-x:scroll;
-	font-size: smaller;
 }
 
 .eq::-webkit-scrollbar {
