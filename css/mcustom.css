@@ -623,3 +623,8 @@ a { text-decoration: none; }
 	border-left:20px solid #005AC3;border-right:10px solid #005AC3;	height: 90px;		
 	}	
   }
+
+.linealign .MathJax_Display { 
+    text-align: left !important;
+    display: inline !important;
+}  
