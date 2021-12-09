@@ -76,16 +76,14 @@ a { text-decoration: none; }
   }
 
   .regular {
-	width: 95%;
 	color: rgba(0,0,0,1);
 	font-weight: Regular;
 	font-size: 16px;
 	opacity: 1;
 	text-align: left;
-	display: block; 
   }
 .quater{
-	width: 96%;
+	width: 100%;
 	box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
 	border-radius: 15px;
 }
@@ -176,8 +174,8 @@ a { text-decoration: none; }
 
 
   .v110_48 {
-	width: 314px;
-	height: 328px;
+	width: 144px;
+	height: 152px;
 	background: url("../images/v110_48.png");
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -196,8 +194,8 @@ a { text-decoration: none; }
   }
 
   .v110_54 {
-	width: 285px;
-	height: 323px;
+	width: 144px;
+	height: 152px;
 	background: url("../images/v110_54.png");
 	background-repeat: no-repeat;
 	background-position: center center;
@@ -451,6 +449,13 @@ a { text-decoration: none; }
 	  height: 40px;
 	  padding: 10px;
   }
+
+  .eq-box {
+	width: 100%;
+	padding: 10px;  
+	background: #F3F3F3;
+	border: 1px solid #D5D5D5;
+  }
   
   @media screen and (max-height: 450px) {
 	.overlay a {font-size: 20px}
@@ -464,6 +469,18 @@ a { text-decoration: none; }
   @media screen and (max-width: 1080px) {
 	  * {
 		  font-family: Roboto;
+	  }
+
+	  .image-graph {
+		  width: 144;
+		  height: 152px
+	  }
+
+	  .eq-box {
+		width: 100%;
+		padding: 10px;  
+		background: #F3F3F3;
+		border: 1px solid #D5D5D5;
 	  }
 
 	  .contenedor-menu .menu {  font-size: 14px;}
